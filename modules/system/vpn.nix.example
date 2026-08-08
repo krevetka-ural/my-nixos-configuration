@@ -1,0 +1,20 @@
+{ config, pkgs, ... }:
+{
+  networking.wireguard.enable = true;
+
+  networking.wireguard.interfaces.wg0 = {
+    ips = [ "x.x.x.x/xx" ];
+    dns = [ "1.1.1.1" "1.0.0.1" ];
+    privateKeyFile = "/etc/wireguard/wg0.key";
+    # privateKey = "x=";
+    peers = [
+      {
+        publicKey = "x=";
+        presharedKey = "x=";
+        endpoint = "192.xx.xxx.x:xxxxx";
+        allowedIPs = [ "0.0.0.0/0" ];
+        persistentKeepalive = 25;
+      }
+    ];
+  };
+}
