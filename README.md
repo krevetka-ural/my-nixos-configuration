@@ -21,13 +21,17 @@ I use various software for my work:
 * `KdenLive` for video editing.
 * `VLC` and `Haruna` for multimedia.
 * `OBS Studio` for screen recording.
-* `Telegram Desktop` and `Vesctop` for 
-* `Chromium` 
+* `Telegram Desktop` and `Vesctop` for social networking.
+* `Chromium` for internet browser.
+* `LibleOffice` for office.
 * `PrismLauncher` for Minecraft.
 * `Steam` for other games.
 * `Wiregard` for proxy.
+## Repository Structure
+Each part of the main `configuration.nix` is divided into separate parts located in `/modules/system/`. This is done to simplify access to system settings for the user, drivers, sound, etc. 
 ## Install
-### Before Install
-This configuration was written for a PC that is *extremely* Linux-unfriendly. This means it includes **Nvidia** drivers. If you have a computer with AMD or another graphics card, you'll need to comment out the `./modules/system/nvidia`.nix line in the import parameters in `configuration.nix` and write the configuration for your graphics card.
+### Before install installation
+This configuration was written for a PC that is *extremely* Linux-unfriendly. This means it includes **Nvidia** drivers. If you have a computer with **AMD** or *other* graphics card, you'll need to comment out the `./modules/system/nvidia`.nix line in the import parameters in `configuration.nix` and write the configuration for your graphics card.
 If you have a *BIOS*, we recommend using **GRUB**. Simply comment out the *systemd-boot* lines, uncomment the **GRUB** parameters in `boot.nix`, and set all the necessary parameters.
-### Install
+### Installation from sources
+### After installation
