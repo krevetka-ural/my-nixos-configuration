@@ -29,8 +29,8 @@
 # Outputs
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
-      username = "krev"; # Change this!!!
-      hostname = "pechka"; # This too...
+      username = "user"; # Change this!!!
+      hostname = "hostname"; # This too...
     in
     {
     nixosConfigurations = {
