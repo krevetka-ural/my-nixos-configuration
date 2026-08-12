@@ -1,6 +1,6 @@
 # ❄️ My NixOS configuration ❄️
 ### 😺 Introduction...
-Some time ago, I started using **NixOS** and noticed one thing: most **"dotfiles"** and **"rices"** for the system were very confusing and complex, featuring fancy window managers, tons of packages, and custom themes. None of that suited me. I needed a simple and straightforward configuration: **KDE Plasma** and a couple of utilities. So, I decided to write my own configuration from scratch. Everything presented here reflects my personal software preferences and my vision of an **"Ideal System!"** In each `.nix` file, I left comments for newcomers who want to use my configuration. If you're an experienced user checking out my efforts, I'm sincerely glad to see you too! If you like this configuration or want to save it for yourself, click the **"Star"** button – it will help me develop this small project
+Some time ago, I started using **NixOS** and noticed one thing: most **"dotfiles"** and **"rices"** for the system were very confusing and complex, featuring fancy window managers, tons of packages, and custom themes. None of that suited me. I needed a simple and straightforward configuration: **KDE Plasma** and a couple of utilities. So, I decided to write my own configuration from scratch. Everything presented here reflects my personal software preferences and my vision of an **"Ideal System!"** In each `.nix` file, I left comments for newcomers who want to use my configuration. If you're an experienced user checking out my efforts, I'm sincerely glad to see you too! If you like this configuration or want to save it for yourself, click the **"Star"** button - it will help me develop this small project
 **:)**
 
 **I don't consider this to be some kind of serious *rice*, just a comfort configuration for beginners.**
@@ -33,10 +33,10 @@ Each part of the main `configuration.nix` is divided into separate parts located
 
 ```
 .
-├── flake.nix                    # entry point – change username/hostname here
+├── flake.nix                    # entry point - change username/hostname here
 ├── configuration.nix            # imports every module below
 ├── home.nix                     # imports the home-manager modules
-├── hardware-configuration.nix   # not in the repo – generate your own, read "Install"
+├── hardware-configuration.nix   # not in the repo - generate your own, read "Install"
 └── modules/
     ├── system/
     │   ├── boot.nix              # bootloader, kernel
@@ -60,7 +60,7 @@ If you have a *BIOS*, we recommend using **GRUB**. Simply comment out the *syste
 
 ### Installation from sources
 1. Boot from the NixOS installer, partition and mount your disk as usual.
-2. Generate your own hardware config – this repo doesn't (and can't) ship one for you:
+2. Generate your own hardware config - this repo doesn't (and can't) ship one for you:
    ```
    nixos-generate-config --root /mnt
    ```
@@ -70,7 +70,7 @@ If you have a *BIOS*, we recommend using **GRUB**. Simply comment out the *syste
    mv /my-nixos-configuration/* /mnt/etc/nixos/
    cd /mnt/etc/nixos/
    ```
-4. Open `flake.nix` and change `username` and `hostname` – that's the only place you need to touch, every module picks the values up from there.
+4. Open `flake.nix` and change `username` and `hostname` - that's the only place you need to touch, every module picks the values up from there.
 5. *(Optional)* Want the VPN module? Copy `modules/system/vpn_nix.example` to `modules/system/vpn.nix`, fill in your own WireGuard peer, and uncomment its line in `configuration.nix`'s `imports`.
 6. Install the system:
    ```
@@ -78,7 +78,7 @@ If you have a *BIOS*, we recommend using **GRUB**. Simply comment out the *syste
    ```
 
 ### 📄 After installation
-Log in and set yourself a real password – `user.nix` ships with a placeholder `initialPassword`, don't keep it:
+Log in and set yourself a real password - `user.nix` ships with a placeholder `initialPassword`, don't keep it:
 ```
 passwd
 ```
@@ -86,6 +86,6 @@ From here on, applying any change to the config is just:
 ```
 sudo nixos-rebuild switch --flake .
 ```
-or use the `rebuild` alias already set up in fish (see `modules/home/fish.nix`) – same thing, fewer keystrokes.
+or use the `rebuild` alias already set up in fish (see `modules/home/fish.nix`) - same thing, fewer keystrokes.
 
-That's it – you're running the same system I do! If any module doesn't fit your hardware or taste, that's exactly what the split-by-topic structure in `/modules/` is for: find the file, change the file, rebuild.
+That's it - you're running the same system I do! If any module doesn't fit your hardware or taste, that's exactly what the split-by-topic structure in `/modules/` is for: find the file, change the file, rebuild.
