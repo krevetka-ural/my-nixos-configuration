@@ -52,7 +52,6 @@
   # KDE packages
     kdePackages.partitionmanager
     kdePackages.kdenlive
-    kdePackages.kdeconnect-kde
     kdePackages.kcalc
     kdePackages.kate
     kdePackages.gwenview
