@@ -77,7 +77,7 @@ If you have a *BIOS*, we recommend using **GRUB**. Simply comment out the *syste
    nixos-install --root /mnt --flake /mnt/etc/nixos#<hostname>
    ```
 
-### 📄 After installation
+## 📄 After installation
 Log in and set yourself a real password - `user.nix` ships with a placeholder `initialPassword`, don't keep it:
 ```
 passwd
