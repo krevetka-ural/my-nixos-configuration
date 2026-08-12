@@ -47,7 +47,7 @@ Each part of the main `configuration.nix` is divided into separate parts located
     │   ├── xserver.nix           # Xorg, keyboard layout
     │   ├── desktop.nix           # KDE Plasma 6 + Plasma Login
     │   ├── games.nix             # Steam, gamemode
-    │   └── vpn_nix.example       # WireGuard template, read "Before installation"
+    │   └── vpn_nix.example       # WireGuard template
     └── home/
         ├── fastfetch.nix
         └── fish.nix
