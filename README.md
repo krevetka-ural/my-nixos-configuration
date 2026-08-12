@@ -78,7 +78,7 @@ If you have a *BIOS*, we recommend using **GRUB**. Simply comment out the *syste
    ```
 
 ### 📄 After installation
-Log in and set yourself a real password:
+Log in and set yourself a real password – `user.nix` ships with a placeholder `initialPassword`, don't keep it:
 ```
 passwd
 ```
