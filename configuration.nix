@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./modules/system/boot.nix # Boot options (systemd-boot, grub, EFI support, etc.)
       ./modules/system/system.nix # System management (network, locale, time, etc.)
+      ./modules/system/terminal.nix # Terminal preferences
       ./modules/system/nvidia.nix # NOvidea cards
       ./modules/system/audio.nix # Audio confs
       ./modules/system/user.nix # User settings adn groups
