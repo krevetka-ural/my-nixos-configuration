@@ -12,7 +12,7 @@ Boot is performed via `systemd-boot`, but I've left the commented lines for **GR
 
 The default greeter is KDE's `Plasma Login`. The desktop environment is `KDE Plasma`, accordingly.
 
-Home-manager is used to describe the interactive shell, fish, and the beautiful fastfetch autostart. All of this is written in *Nix*, without a single line of QML or other programming languages.
+Home-manager is used to describe the interactive shell, fish, and the beautiful custom fastfetch autostart. All of this is written in *Nix*, without a single line of QML or other programming languages.
 
 I use various software for my work:
 * `KDE Partition Manager` for disk management.
@@ -49,8 +49,8 @@ Each part of the main `configuration.nix` is divided into separate parts located
     │   ├── games.nix             # Steam, gamemode
     │   └── vpn_nix.example       # WireGuard template
     └── home/
-        ├── fastfetch.nix
-        └── fish.nix
+        ├── fastfetch.nix         # Custom NixOS-like configuration of fasftetch
+        └── fish.nix              # Custom fish shell with aliases
 ```
 
 ## 💽 Install
