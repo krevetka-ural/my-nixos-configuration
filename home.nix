@@ -1,6 +1,5 @@
 { config, pkgs, username, ... }:
 {
-
 # Home username
   home.username = username;
 
@@ -8,7 +7,7 @@
   home.homeDirectory = "/home/${username}";
 
 # Stste Version Home Manager
-  home.stateVersion = "26.11";
+  home.stateVersion = "26.05";
 
 # Home packages
   home.packages = with pkgs; [
@@ -22,9 +21,9 @@
   imports = [
     ./modules/home/fastfetch.nix
     ./modules/home/fish.nix
+    ./modules/home/alacritty.nix
   ];
 
 # Enable Home Manager
   programs.home-manager.enable = true;
-
 }
