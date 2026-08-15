@@ -17,7 +17,7 @@
     ];
 
 # Stste version ("26.05" Yarara or "26.11" Zokor)
-  system.stateVersion = "26.11";
+  system.stateVersion = "26.05";
 
 # Fish shell             <*>< <*>< <*>< 
   programs.fish.enable = true;
