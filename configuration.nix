@@ -35,7 +35,6 @@
   # Termianal utils and fonts
     btop
     terminus_font
-    nerd-fonts.jetbrains-mono # monospace font
   # Social
     vesktop
     telegram-desktop
