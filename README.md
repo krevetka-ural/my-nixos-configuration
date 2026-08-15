@@ -50,7 +50,7 @@ Each part of the main `configuration.nix` is divided into separate parts located
     │   └── vpn_nix.example       # WireGuard template
     └── home/
         ├── fastfetch.nix         # Custom NixOS-like configuration of fasftetch
-        ├── alacritty.nix         # custom alacritty with my color schema
+        ├── alacritty.nix         # Custom alacritty with my color schema
         └── fish.nix              # Custom fish shell with aliases
 ```
 
