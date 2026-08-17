@@ -19,9 +19,10 @@
 
 # Imports home configs
   imports = [
-    ./modules/home/fastfetch.nix
-    ./modules/home/fish.nix
     ./modules/home/alacritty.nix
+    ./modules/home/fish.nix
+    ./modules/home/starship.nix
+    ./modules/home/fastfetch.nix
   ];
 
 # Enable Home Manager
