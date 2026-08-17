@@ -44,7 +44,7 @@
         };
       };
     # Change terminal schema Kribiska
-      colos = {
+      colors = {
       # Backgound colors
         primary = {
           background = "#31283d";
@@ -67,8 +67,8 @@
           green = "#009463";
           yellow = "#ffc84b";
           blue = "#007491";
-          magenta = "#a35994";
           cyan = "#766f7f";
+          magenta = "#a35994";
           white = "#f4f1ea";
         };
       };

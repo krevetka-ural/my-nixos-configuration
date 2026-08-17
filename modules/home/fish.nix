@@ -1,5 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, hostname, ... }:
 {
+#  <*>< <*>< <*>< 
   programs.fish = {
     enable = true;
 
@@ -11,8 +12,9 @@
 
   # Aliases for fish
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake .";
-      shit = "sudo reboot";
+      rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#${hostname}";
+      edit = "cd /etc/nixos";
+      bye = "sudo reboot";
       ff = "fastfetch";
       bb = "bash";
     };

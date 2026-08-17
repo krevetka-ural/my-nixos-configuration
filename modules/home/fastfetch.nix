@@ -15,8 +15,8 @@
 
       modules = [
       {
-          type = "custom";
-          format = "# fastfetch.nix";
+        type = "custom";
+        format = "# fastfetch.nix";
       }
       {
         type = "custom";

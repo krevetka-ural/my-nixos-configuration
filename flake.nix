@@ -13,11 +13,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-  # KDE Plasma manager (for Konsole)
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+  # KDE Plasma manager
+#    plasma-manager = {
+#      url = "github:nix-community/plasma-manager";
+#      inputs.nixpkgs.follows = "nixpkgs";
+#    };
 
   # Helium Browser (Unless)
 #    helium = {
@@ -45,12 +45,13 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = { inherit inputs username hostname; };
 
           # Imports Home Manager configs
             home-manager.users.${username} = {
               imports = [
-                inputs.plasma-manager.homeManagerModules.plasma-manager
+#                inputs.plasma-manager.homeManagerModules.plasma-manager
                 ./home.nix
               ];
             };

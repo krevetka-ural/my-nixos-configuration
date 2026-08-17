@@ -4,7 +4,7 @@
   boot.loader.timeout = 25;
 
 # Linux Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest; # or "_zen" for gaming
+  boot.kernelPackages = pkgs.linuxPackages; # "_latest", for arch-expirience, or "_zen", for gaming.
 
 # SystemD boot
   boot.loader.systemd-boot.enable = true;

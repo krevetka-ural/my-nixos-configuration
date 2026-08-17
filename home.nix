@@ -12,7 +12,8 @@
 # Home packages
   home.packages = with pkgs; [
     vscodium
-    kdePackages.kdeconnect-kde
+    vesktop
+    telegram-desktop
 #    fastfetch
 #    fish
   ];
