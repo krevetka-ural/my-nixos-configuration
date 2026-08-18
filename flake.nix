@@ -12,18 +12,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-  # KDE Plasma manager
-#    plasma-manager = {
-#      url = "github:nix-community/plasma-manager";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
-
-  # Helium Browser (Unless)
-#    helium = {
-#      url = "github:schembriaiden/helium-browser-nix-flake";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
   };
 
 # Outputs
